@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", "Segoe UI", sans-serif;
+  --color-ink: #1c2430;
+  --color-muted: #5b6777;
+  --color-line: #dfe5ee;
+  --color-panel: #f3f6fa;
+  --color-surface: #ffffff;
+  --color-accent: #0f766e;
+  --color-accent-soft: #ccfbf1;
+  --color-accent-hover: #0d9488;
+}
+
+:root {
+  color: var(--color-ink);
+  background: var(--color-panel);
+  font-family: var(--font-sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(1200px 500px at 10% -10%, #d9f3ef 0%, transparent 55%),
+    radial-gradient(900px 400px at 100% 0%, #e8eef8 0%, transparent 50%),
+    var(--color-panel);
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.cv-highlight {
+  background-color: #fde68a;
+  color: inherit;
+  padding: 0 0.12em;
+  border-radius: 0.2em;
+}
+
+.cv-docx {
+  color: var(--color-ink);
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+
+.cv-docx h1,
+.cv-docx h2,
+.cv-docx h3 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 1.3em 0 0.45em;
+}
+
+.cv-docx p {
+  margin: 0.55em 0;
+}
+
+.cv-docx ul,
+.cv-docx ol {
+  margin: 0.55em 0;
+  padding-left: 1.25rem;
+}
+
+.react-pdf__Page {
+  background: white;
+}
+
+.react-pdf__Page__textContent mark,
+.react-pdf__Page__textContent .cv-highlight {
+  background-color: #fde68a;
+  color: transparent;
+}
+
+.status-new {
+  background: #e0f2fe;
+  color: #075985;
+}
+
+.status-interview {
+  background: #ffedd5;
+  color: #9a3412;
+}
+
+.status-offer {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-rejected {
+  background: #ffe4e6;
+  color: #9f1239;
+}
+
+.app-shell {
+  background: color-mix(in srgb, var(--color-surface) 88%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.sidebar-shell {
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-line);
+}
+
+.field {
+  width: 100%;
+  border: 1px solid var(--color-line);
+  border-radius: 0.65rem;
+  background: #fbfcfe;
+  padding: 0.45rem 0.65rem;
+  font-size: 0.875rem;
+  color: var(--color-ink);
+  outline: none;
+}
+
+.field:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 20%, transparent);
+}
+
+.btn-primary {
+  width: 100%;
+  border-radius: 0.75rem;
+  background: var(--color-accent);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.65rem 0.85rem;
+  transition: background 140ms ease;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+}
+
+.btn-primary:focus-visible,
+.btn-ghost:focus-visible,
+.icon-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 28%, transparent);
+}
